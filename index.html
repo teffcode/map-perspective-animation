@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Palanquin" rel="stylesheet">
     <title>Document</title>
 
     <style>
@@ -11,15 +12,16 @@
             background-color: #f5f1ee;
         }
         .base-circle {
-            width: 350px;
-            height: 330px;
+            width: 445px;
+            height: 251px;
             background-color: #cdf7fd;
             border-radius: 50%;
-            transform: perspective(50em) rotateX(50deg);
+            transform: perspective(50em) rotateX(30deg);
             border: 1px solid #d5f1f7;
             position: absolute;
             left: 0px;
             right: 0px;
+            top: 50px;
             margin: auto;
         }
         .container {
@@ -42,6 +44,42 @@
             transform-style: preserve-3d;
             transform: rotateX(-30deg) rotateY(45deg);
         }
+        .code {
+            position: absolute !important;
+            top: -8px;
+            margin-top: 50px;
+            width: 300px;
+            height: 200px;
+            position: relative;
+            /* perspective: 1200px; */
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg) rotateY(45deg);
+        }
+        .code-image {
+            width: 235px;
+            height: 124px;
+            margin-left: 25px;
+            position: absolute;
+            border-radius: 10px;
+            background-image: url(./assets/code.png);
+            background-size: cover;
+            transform-style: preserve-3d;
+            transform: rotateX(95deg) translateZ(4em);
+            left: 270px;
+            top: 297px;
+        }
+        .code-image-shadow {
+            width: 235px;
+            height: 124px;
+            top: 280px;
+            left: 270px;
+            margin-left: 25px;
+            position: absolute;
+            border-radius: 10px;
+            background-color: #f34949;
+            transform-style: preserve-3d;
+            transform: rotateX(95deg) translateZ(1em);
+        }
         .div1 {
             width: 230px;
             height: 150px;
@@ -51,17 +89,18 @@
             transform-style: preserve-3d;
             transform: rotateX(-30deg);
             top: -300px;
-            left: 200px;
+            left: 132px;
             animation: sp 8s infinite linear;
         }
         #div2 {
-            width: 20px;
+            width: 17px;
             height: 76px;
             padding: 50px;
             margin-left: 50px;
             position: absolute;
             border: 1px solid black;
-            background-image: url(https://image.freepik.com/free-vector/road-map-with-pointers-in-flat-style_23-2147796451.jpg);
+            background-image: url(./assets/map.png);
+            /* background-image: url(https://image.freepik.com/free-vector/road-map-with-pointers-in-flat-style_23-2147796451.jpg); */
             background-size: cover;
             transform-style: preserve-3d;
             transform: rotateX(95deg) translateZ(1em);
@@ -92,6 +131,7 @@
             transform: rotateX(95deg) translateZ(2em);
             left: 43px;
             top: 60px;
+            border: 2px solid white;
         }
         .div4 {
             width: 30px;
@@ -163,7 +203,7 @@
             right: 0;
             margin: auto;
             /* background-color: yellow; */
-            background-image: url(https://images.pexels.com/photos/573299/pexels-photo-573299.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350);
+            /* background-image: url(https://images.pexels.com/photos/573299/pexels-photo-573299.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350); */
             background-size: cover;
             position: absolute;
             z-index: 2;
@@ -183,9 +223,60 @@
         }
         .shadow {
             background-color: #8ec1d0;
+            opacity: 0.4;
         }
         .color {
             background-color: #f34949 !important;
+        }
+        .hugo {
+            background-image: url(./assets/Hugo.jpeg);
+        }
+        .vane {
+            background-image: url(./assets/Vane.jpeg);
+        }
+        .sergio {
+            background-image: url(./assets/Sergio.jpeg);
+        }
+        .bola {
+            width: 10px;
+            height: 5px;
+            border-radius: 50%;
+            border: 1px solid white;
+            position: absolute;
+            z-index: 2;
+            left: 220px;
+            top: 160px;
+        }
+        .meetup {
+            width: 200px;
+            height: 72px;
+            border-radius: 10px;
+            background-color: #9b6ded;
+            transform: skewY(-27deg);
+            position: absolute;
+            top: -55px;
+            color: black;
+            z-index: 3;
+            left: -25px;
+        }
+        .meetup p {
+            text-align: center;
+            color: white;
+            font-family: 'Palanquin', sans-serif;
+            font-size: 18px;
+            margin: 0px;
+        }
+        .meetup-shadow1 {
+            opacity: 0.4;
+            top: -70px;
+            left: -40px;
+            z-index: 2;
+        }
+        .meetup-shadow2 {
+            opacity: 0.1;
+            top: -85px;
+            left: -55px;
+            z-index: 1;
         }
         @keyframes jump {
             0% {
@@ -213,6 +304,15 @@
 </head>
 <body>
     <div class="container">
+
+        <div class="meetup">
+            <p>Animations <br/> Meetup</p> 
+        </div>
+        <div class="meetup meetup-shadow1"></div>
+        <div class="meetup meetup-shadow2"></div>
+
+        <div class="bola"></div>
+
         <div class="base-circle"></div>
         <div id="div1">
             <div id="div2"></div>
@@ -225,13 +325,45 @@
                 <div class="square2"></div>
             </div>
         </div>
+
         <div class="div1">
-            <div class="div2"></div>
+            <div class="div2" style="background: #00CECB"></div>
             <div id="container">
-                <div id="circle" class="color"></div>
-                <div id="square" class="color"></div>
-                <div class="circle3"></div>
+                <div id="circle" style="background: #00CECB"></div>
+                <div id="square" style="background: #00CECB"></div>
+                <div class="circle3 hugo"></div>
             </div>
+        </div>
+        <div class="div1" style="top: -400px">
+            <div class="shadow div2"></div>
+        </div>
+
+        <div class="div1" style="top: -575px; left: 210px;">
+            <div class="div2" style="background: #FF5E5B"></div>
+            <div id="container">
+                <div id="circle" style="background: #FF5E5B"></div>
+                <div id="square" style="background: #FF5E5B"></div>
+                <div class="circle3 vane"></div>
+            </div>
+        </div>
+        <div class="div1" style="top: -674px; left: 218px;">
+            <div class="shadow div2"></div>
+        </div>
+
+        <div class="div1" style="top: -845px; left: 295px;">
+            <div class="div2" style="background: #FFCC00"></div>
+            <div id="container">
+                <div id="circle" style="background: #FFCC00"></div>
+                <div id="square" style="background: #FFCC00"></div>
+                <div class="circle3 sergio"></div>
+            </div>
+        </div>
+        <div class="div1" style="top: -945px; left: 308px;">
+            <div class="shadow div2"></div>
+        </div>
+        <div class="code">
+            <div class="code-image"></div>
+            <div class="shadow code-image-shadow"></div>
         </div>
     </div>
 </body>
