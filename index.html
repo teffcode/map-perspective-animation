@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon.ico"/>
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
     <title>Document</title>
 
@@ -18,40 +19,53 @@
             border-radius: 50%;
             transform: perspective(50em) rotateX(30deg);
             border: 1px solid #d5f1f7;
-            position: absolute;
-            left: 0px;
-            right: 0px;
             top: 50px;
-            margin: auto;
         }
-        .container {
-            width: 400px;
-            height: 400px;
-            position: relative;
+        .bola {
+            width: 10px;
+            height: 5px;
+            border-radius: 50%;
+            border: 1px solid white;
+            z-index: 2;
+            left: 220px;
+            top: 160px;
+        }
+        .center-position {
             left: 0px;
             right: 0px;
-            top: 200px;
             margin: auto;
-            /* border: 2px solid red; */
         }
-        #div1 {
-            margin-top: 50px;
-            width: 300px;
-            height: 200px;
-            position: relative;
-            /* border: 3px solid white;  */
-            perspective: 1200px;
-            transform-style: preserve-3d;
-            transform: rotateX(-30deg) rotateY(45deg);
+        .circle {
+            width:  50px;
+            height: 50px;
+            background: #cbd354;
+            border-radius: 50%;
         }
+        .circle-space {
+            width:  40px;
+            height: 40px;
+            border-radius: 50%;
+            background-image: url("./assets/rutan.png");
+            background-size: cover;
+            position: absolute;
+            z-index: 2;
+            top: 5px;
+        }
+        .circle-speaker {
+            width:  40px;
+            height: 40px;
+            border-radius: 50%;
+            background-size: cover;
+            position: absolute;
+            z-index: 2;
+            top: 5px;
+        }        
         .code {
             position: absolute !important;
             top: -8px;
             margin-top: 50px;
             width: 300px;
             height: 200px;
-            position: relative;
-            /* perspective: 1200px; */
             transform-style: preserve-3d;
             transform: rotateX(-30deg) rotateY(45deg);
         }
@@ -59,7 +73,6 @@
             width: 235px;
             height: 124px;
             margin-left: 25px;
-            position: absolute;
             border-radius: 10px;
             background-image: url(./assets/code.png);
             background-size: cover;
@@ -74,178 +87,16 @@
             top: 280px;
             left: 270px;
             margin-left: 25px;
-            position: absolute;
             border-radius: 10px;
             background-color: #f34949;
             transform-style: preserve-3d;
             transform: rotateX(95deg) translateZ(1em);
-        }
-        .div1 {
-            width: 230px;
-            height: 150px;
-            position: relative;
-            /* border: 3px solid red; */
-            perspective: 1200px;
-            transform-style: preserve-3d;
-            transform: rotateX(-30deg);
-            top: -300px;
-            left: 132px;
-            animation: sp 8s infinite linear;
-        }
-        #div2 {
-            width: 17px;
-            height: 76px;
-            padding: 50px;
-            margin-left: 50px;
-            position: absolute;
-            border: 1px solid black;
-            background-image: url(./assets/map.png);
-            /* background-image: url(https://image.freepik.com/free-vector/road-map-with-pointers-in-flat-style_23-2147796451.jpg); */
-            background-size: cover;
-            transform-style: preserve-3d;
-            transform: rotateX(95deg) translateZ(1em);
-            left: 39px;
-            top: 65px;
-        }
-        .div2 {
-            width: 50px;
-            height: 50px;
-            margin-left: 25px;
-            position: absolute;
-            border-radius: 10px;
-            background-color: #f34949;
-            transform-style: preserve-3d;
-            transform: rotateX(95deg) translateZ(1em);
-            left: 65px;
-            top: 125px;
-        }
-        #div3 {
-            width: 30px;
-            height: 122px;
-            padding: 50px;
-            margin-left: 41px;
-            position: absolute;
-            background-color: #1e2f4e;
-            border-radius: 10px;
-            transform-style: preserve-3d;
-            transform: rotateX(95deg) translateZ(2em);
-            left: 43px;
-            top: 60px;
-            border: 2px solid white;
-        }
-        .div4 {
-            width: 30px;
-            height: 122px;
-            padding: 50px;
-            margin-left: 41px;
-            position: absolute;
-            border-radius: 10px;
-            transform-style: preserve-3d;
-            transform: rotateX(95deg) translateZ(0em);
-            left: 43px;
-            top: 60px;
-        }
-        .div5 {
-            width: 100px;
-            height: 100px;
-            margin-left: 41px;
-            position: absolute;
-            border-radius: 10px;
-            transform-style: preserve-3d;
-            transform: rotateX(95deg) translateZ(0em);
-            left: 43px;
-            top: 110px;
-        }
-        
-        #container {
-            animation: jump 3s infinite ease;
-        }
-        #circle {
-            width:  50px;
-            height: 50px;
-            background: #cbd354;
-            border-radius: 50%;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
-        #square {
-            width:  38px;
-            height: 38px;
-            background: #cbd354;
-            border-radius: 12px 0;
-            transform: rotate(-45deg);
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-            top: 15px;
-        }
-        .circle2 {
-            width:  40px;
-            height: 40px;
-            border-radius: 50%;
-            left: 0;
-            right: 0;
-            margin: auto;
-            /* background-color: yellow; */
-            background-image: url("data:image/png;base64,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");
-            background-size: cover;
-            position: absolute;
-            z-index: 2;
-            top: 5px;
-        }
-        .circle3 {
-            width:  40px;
-            height: 40px;
-            border-radius: 50%;
-            left: 0;
-            right: 0;
-            margin: auto;
-            /* background-color: yellow; */
-            /* background-image: url(https://images.pexels.com/photos/573299/pexels-photo-573299.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350); */
-            background-size: cover;
-            position: absolute;
-            z-index: 2;
-            top: 5px;
-        }
-        .square2 {
-            width:  28px;
-            height: 28px;
-            background: white;
-            border-radius: 12px 0;
-            transform: rotate(-45deg);
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-            top: 20px;
-        }
-        .shadow {
-            background-color: #8ec1d0;
-            opacity: 0.4;
-        }
-        .color {
-            background-color: #f34949 !important;
         }
         .hugo {
             background-image: url(./assets/Hugo.jpeg);
         }
-        .vane {
-            background-image: url(./assets/Vane.jpeg);
-        }
-        .sergio {
-            background-image: url(./assets/Sergio.jpeg);
-        }
-        .bola {
-            width: 10px;
-            height: 5px;
-            border-radius: 50%;
-            border: 1px solid white;
-            position: absolute;
-            z-index: 2;
-            left: 220px;
-            top: 160px;
+        .jump-container {
+            animation: jump-animation 3s infinite ease;
         }
         .meetup {
             width: 200px;
@@ -253,7 +104,6 @@
             border-radius: 10px;
             background-color: #F9669E;
             transform: skewY(-27deg);
-            position: absolute;
             top: -55px;
             color: black;
             z-index: 3;
@@ -280,7 +130,110 @@
             left: -55px;
             z-index: 1;
         }
-        @keyframes jump {
+        .perspective {
+            width: 230px;
+            height: 150px;
+            perspective: 1200px;
+            transform-style: preserve-3d;
+            top: -300px;
+            left: 132px;
+            animation: perspective-animation 8s infinite linear;
+        }
+        .phone {
+            width: 30px;
+            height: 122px;
+            padding: 50px;
+            margin-left: 41px;
+            background-color: #1e2f4e;
+            border-radius: 10px;
+            transform-style: preserve-3d;
+            transform: rotateX(95deg) translateZ(2em);
+            left: 43px;
+            top: 60px;
+            border: 2px solid white;
+        }
+        .phone-base {
+            width: 17px;
+            height: 76px;
+            padding: 50px;
+            margin-left: 50px;
+            border: 1px solid black;
+            background-image: url(./assets/map.png);
+            background-size: cover;
+            transform-style: preserve-3d;
+            transform: rotateX(95deg) translateZ(1em);
+            left: 39px;
+            top: 65px;
+        }   
+        .phone-container {
+            margin-top: 50px;
+            width: 300px;
+            height: 200px;
+            perspective: 1200px;
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg) rotateY(45deg);
+        }
+        .phone-shadow {
+            width: 30px;
+            height: 122px;
+            padding: 50px;
+            margin-left: 41px;
+            border-radius: 10px;
+            transform-style: preserve-3d;
+            transform: rotateX(95deg) translateZ(0em);
+            left: 43px;
+            top: 60px;
+        }
+        .position-relative {
+            position: relative;
+        }
+        .position-absolute {
+            position: absolute;
+        }
+        .principal-container {
+            width: 400px;
+            height: 400px;
+            top: 200px;
+        }
+        .square {
+            width:  38px;
+            height: 38px;
+            background: #cbd354;
+            border-radius: 12px 0;
+            transform: rotate(-45deg);
+            top: 15px;
+        }
+        .square-base {
+            width: 50px;
+            height: 50px;
+            margin-left: 25px;
+            border-radius: 10px;
+            background-color: #f34949;
+            transform-style: preserve-3d;
+            transform: rotateX(95deg) translateZ(1em);
+            left: 65px;
+            top: 125px;
+        }
+        .square-space {
+            width:  28px;
+            height: 28px;
+            background: white;
+            border-radius: 12px 0;
+            transform: rotate(-45deg);
+            position: absolute;
+            top: 20px;
+        }
+        .shadow {
+            background-color: #8ec1d0;
+            opacity: 0.4;
+        }
+        .sergio {
+            background-image: url(./assets/Sergio.jpeg);
+        }    
+        .vane {
+            background-image: url(./assets/Vane.jpeg);
+        }
+        @keyframes jump-animation {
             0% {
                 transform: translateY(0px)
             }
@@ -291,7 +244,7 @@
                 transform: translateY(0px)
             }
         }    
-        @keyframes sp {
+        @keyframes perspective-animation {
             0% {
                 transform: rotateX(-30deg) rotateY(0deg)
             }
@@ -305,68 +258,75 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="principal-container center-position position-relative">
 
-        <div class="meetup">
+        <!-- Title Meetup -->
+        <div class="meetup position-absolute">
             <p>Animations <br/> Meetup</p> 
         </div>
-        <div class="meetup meetup-shadow1"></div>
-        <div class="meetup meetup-shadow2"></div>
+        <div class="meetup meetup-shadow1 position-absolute"></div>
+        <div class="meetup meetup-shadow2 position-absolute"></div>
 
-        <div class="bola"></div>
+        <!-- Base Circle -->
+        <div class="base-circle center-position position-absolute"></div>
 
-        <div class="base-circle"></div>
-
-        <div id="div1">
-            <div id="div2"></div>
-            <div id="div3"></div>
-            <div class="shadow div4"></div>
-            <div id="container">
-                <div id="circle"></div>
-                <div id="square"></div>
-                <div class="circle2"></div>
-                <div class="square2"></div>
+        <!-- Phone -->
+        <div class="phone-container position-relative">
+            <div class="phone-base position-absolute"></div>
+            <div class="phone position-absolute"></div>
+            <div class="shadow phone-shadow position-absolute"></div>
+            <div class="jump-container">
+                <div class="circle center-position"></div>
+                <div class="square center-position position-absolute"></div>
+                <div class="circle-space center-position"></div>
+                <div class="square-space center-position"></div>
             </div>
         </div>
+        <div class="bola position-absolute"></div>
 
-        <div class="div1">
-            <div class="div2" style="background: #ada8ee"></div>
-            <div id="container">
-                <div id="circle" style="background: #f9d67b"></div>
-                <div id="square" style="background: #f9d67b"></div>
-                <div class="circle3 hugo"></div>
+        <!-- Speaker 1 -->
+        <div class="perspective position-relative">
+            <div class="square-base position-absolute" style="background: #ada8ee"></div>
+            <div class="jump-container">
+                <div class="circle center-position" style="background: #f9d67b"></div>
+                <div class="square center-position position-absolute" style="background: #f9d67b"></div>
+                <div class="circle-speaker center-position hugo"></div>
             </div>
         </div>
-        <div class="div1" style="top: -400px">
-            <div class="shadow div2"></div>
+        <div class="perspective position-relative" style="top: -400px">
+            <div class="shadow square-base position-absolute"></div>
         </div>
 
-        <div class="div1" style="top: -575px; left: 210px;">
-            <div class="div2" style="background: #ada8ee"></div>
-            <div id="container">
-                <div id="circle" style="background: #f19fc5"></div>
-                <div id="square" style="background: #f19fc5"></div>
-                <div class="circle3 vane"></div>
+        <!-- Speaker 2 -->
+        <div class="perspective position-relative" style="top: -575px; left: 210px;">
+            <div class="square-base position-absolute" style="background: #ada8ee"></div>
+            <div class="jump-container">
+                <div class="circle center-position" style="background: #f19fc5"></div>
+                <div class="square center-position position-absolute" style="background: #f19fc5"></div>
+                <div class="circle-speaker center-position vane"></div>
             </div>
         </div>
-        <div class="div1" style="top: -674px; left: 218px;">
-            <div class="shadow div2"></div>
+        <div class="perspective position-relative" style="top: -674px; left: 218px;">
+            <div class="shadow square-base position-absolute"></div>
         </div>
 
-        <div class="div1" style="top: -845px; left: 295px;">
-            <div class="div2" style="background: #ada8ee"></div>
-            <div id="container">
-                <div id="circle" style="background: #76d2ea"></div>
-                <div id="square" style="background: #76d2ea"></div>
-                <div class="circle3 sergio"></div>
+        <!-- Speaker 3 -->
+        <div class="perspective position-relative" style="top: -845px; left: 295px;">
+            <div class="square-base position-absolute" style="background: #ada8ee"></div>
+            <div class="jump-container">
+                <div class="circle center-position" style="background: #76d2ea"></div>
+                <div class="square center-position position-absolute" style="background: #76d2ea"></div>
+                <div class="circle-speaker center-position sergio"></div>
             </div>
         </div>
-        <div class="div1" style="top: -945px; left: 308px;">
-            <div class="shadow div2"></div>
+        <div class="perspective position-relative" style="top: -945px; left: 308px;">
+            <div class="shadow square-base position-absolute"></div>
         </div>
-        <div class="code">
-            <div class="code-image"></div>
-            <div class="shadow code-image-shadow"></div>
+
+        <!-- Code MedellínCSS -->
+        <div class="code position-relative">
+            <div class="code-image position-absolute"></div>
+            <div class="shadow code-image-shadow position-absolute"></div>
         </div>
     </div>
 </body>
